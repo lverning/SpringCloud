@@ -1,0 +1,18 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: userserver
+  datasource:
+    url: jdbc:mysql:///s-v?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9001/eureka
